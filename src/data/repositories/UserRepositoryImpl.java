@@ -4,6 +4,7 @@ import data.models.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class UserRepositoryImpl implements UserRepository {
 
@@ -11,12 +12,13 @@ public class UserRepositoryImpl implements UserRepository {
     private List<User> users = new ArrayList<>();
 
     @Override
-    public User save(User user) {
+    public  User save(User user) {
         boolean userHasNotBeenSaved = user.getId() == 0;
         if(userHasNotBeenSaved){
         user.setId(generateUserId());
         users.add(user);
-        count++;}
+        count++;
+        }
         return user;
     }
 
@@ -26,11 +28,9 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User findById(int id) {
-        for (User user : users) {
-            if(user.getId() == id) return user;  }
-
-        return null;
-    }
+        for (User user : users) if (user.getId() == id) return user;
+        throw  new NullPointerException("User Id not found");
+        }
 
     @Override
     public long count() {
@@ -39,7 +39,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public List<User> findAll() {
-        return null;
+        return users;
     }
 
     @Override
@@ -62,5 +62,22 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void deleteAll() {
 
+    }
+
+    @Override
+    public User findByUserName(String userName) {
+        for (User user : users){
+            if(Objects.equals(user.getUserName(), userName)){
+                return user;}}
+        return null;
+    }
+
+    @Override
+    public int findId(int id) {
+        for (User user : users) {
+            if(user.getId() == id){ return id;  }
+            else{throw new NullPointerException("Id not found");}
+
+        } return 0;
     }
 }

@@ -28,6 +28,7 @@ public class ArticleRepositoryImpl implements ArticleRepository{
         for (Article article: Articles) {
             if ((article.getId() == articleid)){
                 return article; }
+            else {throw new IllegalArgumentException("Id Not found");}
               }
         return null;
     }

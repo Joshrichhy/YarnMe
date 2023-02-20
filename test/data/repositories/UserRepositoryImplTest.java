@@ -20,7 +20,6 @@ class UserRepositoryImplTest {
         user.setLastName("Oluwakuse");
         user.setUserName("Joshrichhy");
         user.setPassword("kuse");
-
     }
     @Test
     public void saveOneUser_countIsOneTest(){
