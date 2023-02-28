@@ -42,11 +42,10 @@ public class CommentRepositoryImpl implements CommentRepository{
     @Override    
     public void delete(int id) {
         for (Comment comment : comments) {
-            if(comment.getId() == id)comments.remove(comment);
+            if(comment.getId() == id)
+              comments.remove(comment);
             count--;
-            break;
-
-        }
+            break;}
     }
 
     @Override

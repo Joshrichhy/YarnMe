@@ -14,9 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ArticleServiceImplTest {
     ArticleService  articleService;
-    UserRepository userRepository;
     Article newArticle;
-    User user;
 
     @BeforeEach
     void setUp(){

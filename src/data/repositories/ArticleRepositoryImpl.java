@@ -25,12 +25,15 @@ public class ArticleRepositoryImpl implements ArticleRepository{
 
     @Override
     public Article findby(int articleid) {
-        for (Article article: Articles) {
-            if ((article.getId() == articleid)){
-                return article; }
-            else {throw new IllegalArgumentException("Id Not found");}
-              }
-        return null;
+        for (Article article: Articles) {if (article.getId() == articleid) return article;}
+            throw new IllegalArgumentException("Id Not found");
+    }
+
+    @Override
+    public List<Article> findbyUserId(int userid) {
+        ArrayList <Article> userArticles = new ArrayList<>();
+        for (Article article: Articles) {if (article.getAuthorId() == userid)userArticles.add(article);}
+        return userArticles;
     }
 
     @Override

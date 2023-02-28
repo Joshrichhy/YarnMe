@@ -9,7 +9,7 @@ import java.util.Objects;
 public class UserRepositoryImpl implements UserRepository {
 
     private int count;
-    private List<User> users = new ArrayList<>();
+    private static List<User> users = new ArrayList<>();
 
     @Override
     public  User save(User user) {

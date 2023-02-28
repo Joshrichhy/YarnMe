@@ -5,28 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a373626f-216d-4cab-bc5a-773f8c039b36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/ArticleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dtos/requests/CreatePostRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dtos/requests/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dtos/responses/FindUserResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/ArticleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/ArticleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/services/ArticleServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/services/CommentServicesImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/services/UserServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/models/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/models/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/models/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/repositories/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/repositories/ArticleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/repositories/ArticleRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/repositories/ArticleRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/repositories/CommentRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/repositories/CommentRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/repositories/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/repositories/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/repositories/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/data/repositories/UserRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/data/repositories/UserRepositoryImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Mapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/data/repositories/CommentRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/data/repositories/CommentRepositoryImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/services/ArticleServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/services/ArticleServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/services/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/services/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +76,15 @@
       <recent name="data.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArticleRepositoryImplTest.saveTwoPostAndFindAllPost">
-    <configuration name="ArticleRepositoryImplTest.saveTwoPostAndFindAllPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="yarnMe" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yarnMe" />
       <extension name="coverage">
         <pattern>
@@ -92,61 +93,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="data.repositories.ArticleRepositoryImplTest" />
-      <option name="METHOD_NAME" value="saveTwoPostAndFindAllPost" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ArticleServiceImplTest.findPostWithAuthoId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yarnMe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="services.ArticleServiceImplTest" />
-      <option name="METHOD_NAME" value="findPostWithAuthoId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ArticleServiceImplTest.findPostWithId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yarnMe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="services" />
-      <option name="MAIN_CLASS_NAME" value="services.ArticleServiceImplTest" />
-      <option name="METHOD_NAME" value="findPostWithId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yarnMe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="data.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="data.repositories.UserRepositoryImplTest" />
+      <option name="MAIN_CLASS_NAME" value="data.repositories.CommentRepositoryImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRepositoryImplTest.saveOneUser_countIsOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentRepositoryImplTest.saveCommentAndCommentIsOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yarnMe" />
       <extension name="coverage">
         <pattern>
@@ -155,8 +108,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="data.repositories.UserRepositoryImplTest" />
-      <option name="METHOD_NAME" value="saveOneUser_countIsOneTest" />
+      <option name="MAIN_CLASS_NAME" value="data.repositories.CommentRepositoryImplTest" />
+      <option name="METHOD_NAME" value="saveCommentAndCommentIsOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentRepositoryImplTest.saveTwoCommentAndDeleteOneCommentWithId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yarnMe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="data.repositories" />
+      <option name="MAIN_CLASS_NAME" value="data.repositories.CommentRepositoryImplTest" />
+      <option name="METHOD_NAME" value="saveTwoCommentAndDeleteOneCommentWithId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.test_duplicateUserNameThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yarnMe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="test_duplicateUserNameThrowsException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ArticleRepositoryImplTest.saveTwoPostAndFindAllPost" />
-        <item itemvalue="JUnit.UserRepositoryImplTest" />
-        <item itemvalue="JUnit.ArticleServiceImplTest.findPostWithAuthoId" />
-        <item itemvalue="JUnit.ArticleServiceImplTest.findPostWithId" />
-        <item itemvalue="JUnit.UserRepositoryImplTest.saveOneUser_countIsOneTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.UserServiceImplTest.test_duplicateUserNameThrowsException" />
+        <item itemvalue="JUnit.CommentRepositoryImplTest" />
+        <item itemvalue="JUnit.CommentRepositoryImplTest.saveTwoCommentAndDeleteOneCommentWithId" />
+        <item itemvalue="JUnit.CommentRepositoryImplTest.saveCommentAndCommentIsOne" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +171,9 @@
       <workItem from="1676376514680" duration="15206000" />
       <workItem from="1676392922268" duration="20445000" />
       <workItem from="1676735091136" duration="30195000" />
-      <workItem from="1676921768244" duration="8143000" />
+      <workItem from="1676921768244" duration="8917000" />
+      <workItem from="1677049484703" duration="1895000" />
+      <workItem from="1677095321939" duration="45451000" />
     </task>
     <servers />
   </component>
@@ -203,5 +190,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

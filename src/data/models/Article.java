@@ -49,12 +49,12 @@ public class Article {
 
     @Override
     public String toString() {
-        return "Article{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", body='" + body + '\'' +
-                ", timeCreated=" + timeCreated +
-                ", authorId=" + authorId +
-                '}';
+        return String.format("""
+                Post ID: %s
+                Author ID: %s
+                Title: %s
+                Body: %s
+                Date: %s
+               """, id, authorId, title, body, timeCreated);
     }
 }

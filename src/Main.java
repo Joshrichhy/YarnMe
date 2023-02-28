@@ -19,6 +19,8 @@ public class Main {
                  2--> Find User
                  3--> Create Post
                  4--> Find Post
+                 5 --> Find Posts with User Id
+                 6 --> Read All Posts
                  """;
         String input = input(message);
         switch ((input.charAt(0))){
@@ -26,11 +28,24 @@ public class Main {
             case '2' -> findUser();
             case '3' -> createPost();
             case '4' -> findPost();
+            case '5' -> findPostWithUserId();
+            case '6' -> readAllPosts();
                 default ->  {
                     display("Invalid input, try again");
                     startApp();
                 }
         }
+    }
+
+    private static void readAllPosts() {
+        display(articleController.findAllPosts().toString());
+        startApp();
+    }
+
+    private static void findPostWithUserId() {
+        String userInput = input("Enter User ID to find All Posts");
+        display(articleController.findAllPostbyUser(Integer.parseInt(userInput)).toString());
+        startApp();
     }
 
     private static void findPost() {

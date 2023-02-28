@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class Comment {
     private int id;
-    private int articleId;
+    private int commentId;
     private int userId;
     private String comment;
     private LocalDateTime timeCreated = LocalDateTime.now();
@@ -17,12 +17,12 @@ public class Comment {
         this.id = id;
     }
 
-    public int getArticleId() {
-        return articleId;
+    public int getCommentId() {
+        return commentId;
     }
 
-    public void setArticleId(int articleId) {
-        this.articleId = articleId;
+    public void setCommentId(int commentId) {
+        this.commentId = commentId;
     }
 
     public int getUserId() {
@@ -47,5 +47,16 @@ public class Comment {
 
     public void setTimeCreated(LocalDateTime timeCreated) {
         this.timeCreated = timeCreated;
+    }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", commentId=" + commentId +
+                ", userId=" + userId +
+                ", comment='" + comment + '\'' +
+                ", timeCreated=" + timeCreated +
+                '}';
     }
 }

@@ -28,8 +28,6 @@ public class Mapper {
         response.setUsername(foundUser.getUserName());
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("E, dd/MM/yyyy, hh:mm a");
         response.setDateRegistered(formatter.format(foundUser.getDateRegistered()));
-
-
     }
 
 }

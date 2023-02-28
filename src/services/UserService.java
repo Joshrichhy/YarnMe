@@ -7,8 +7,7 @@ import dtos.responses.FindUserResponse;
 import java.util.List;
 
 public interface UserService {
-
-    User register(RegisterRequest registerRequest);
+   User register(RegisterRequest registerRequest);
 
     FindUserResponse findUser(int id);
 

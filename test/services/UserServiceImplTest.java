@@ -57,7 +57,6 @@ class UserServiceImplTest {
     @Test
     public void test_ThrowExceptionWhenIdIsWrong(){
         userService.register(registerRequest);
-        System.out.println(userService.toString());
         assertThrows(NullPointerException.class, () ->  userService.findUser(2));
     }
 }

@@ -13,6 +13,7 @@ class CommentRepositoryImplTest {
     public void setUp() {
         commentRepository = new CommentRepositoryImpl();
         comment = new Comment();
+        comment.setComment("I am done with this country");
     }
     @Test
     public void saveCommentAndCommentIsOne(){
@@ -57,9 +58,9 @@ class CommentRepositoryImplTest {
     }
     @Test
     public void saveTwoCommentAndDeleteOneCommentWithId() {
-         commentRepository.save(comment);
+         Comment savedComment = commentRepository.save(comment);
         assertEquals(1, commentRepository.count());
-        commentRepository.delete(comment);
+        commentRepository.delete(1);
         assertEquals(0, commentRepository.count() );
     }
 
